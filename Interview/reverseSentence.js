@@ -6,7 +6,6 @@ function reverseSentence(sentence) {
 
     for (let i = 1; i < firstStr.length; i++)
         firstCharStr += firstStr[i];
-
     arr[0] = firstCharStr;
 
     let lastStr = arr[arr.length - 1];
@@ -14,7 +13,6 @@ function reverseSentence(sentence) {
 
     for (let i = 1; i < lastStr.length; i++)
         lastCharStr += lastStr[i];
-
     arr[arr.length - 1] = lastCharStr;
 
     let lastWord = arr[arr.length - 1];
