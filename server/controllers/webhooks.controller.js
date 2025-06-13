@@ -45,6 +45,7 @@ const createWebhook = async (req, res) => {
         // sourceUrl -> where the event orignates from
         // callbackUrl -> where the event should be sent
         // events -> array of event types to subscribe to
+        console.log("Creating webhook with body:", req.body);
         const { sourceUrl, callbackUrl, events } = req.body;
 
         if (!sourceUrl || !callbackUrl || !events || !Array.isArray(events) || events.length === 0) {
