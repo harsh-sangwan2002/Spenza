@@ -42,6 +42,9 @@ const triggerWebhookEvent = async (req, res) => {
 
 const createWebhook = async (req, res) => {
     try {
+        // sourceUrl -> where the event orignates from
+        // callbackUrl -> where the event should be sent
+        // events -> array of event types to subscribe to
         const { sourceUrl, callbackUrl, events } = req.body;
 
         if (!sourceUrl || !callbackUrl || !events || !Array.isArray(events) || events.length === 0) {

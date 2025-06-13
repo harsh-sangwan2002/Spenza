@@ -4,6 +4,11 @@ const amqp = require('amqplib');
 
 let channel;
 
+// Async processing	Event queued and processed separately
+// Reliability	Messages survive crashes
+// Retry/failure support	Failed webhooks can be retried/logged
+// Scalable	Multiple workers can process the same queue
+// Decoupling	Producers (trigger) and consumers (deliver) are independent
 const connect = async () => {
     try {
         const connection = await amqp.connect('amqp://localhost');
